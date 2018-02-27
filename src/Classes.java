@@ -18,9 +18,11 @@ class Fraction {
         }
 
         for (int i = 2; i < menor; i++) {
-            while (this.numerador % i == 0 && this.denominador % i == 0){
-                this.numerador /= i;
-                this.denominador /= i;
+            if (this.numerador % divisor == 0 && this.denominador % divisor == 0){
+                this.numerador /= divisor;
+                this.denominador /= divisor;
+            } else {
+                divisor++;
             }
         }
     }
